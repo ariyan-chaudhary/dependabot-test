@@ -35,9 +35,16 @@ function App() {
     try {
       const response = await fetch('http://localhost:5000/api/todos')
       const data = await response.json()
-      setTodos(data)
+      // Ensure data is an array before setting state to avoid crashes
+      if (Array.isArray(data)) {
+        setTodos(data)
+      } else {
+        console.error('Fetched data is not an array:', data)
+        setTodos([])
+      }
     } catch (error) {
       console.error('Error fetching todos:', error)
+      setTodos([])
     }
   }
 
