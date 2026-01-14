@@ -5,38 +5,132 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 2rem;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
 
-.card {
-  padding: 2em;
+.input-field {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-.read-the-docs {
+.textarea-field {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.react-select-container {
+    text-align: left;
+}
+
+.add-btn {
+    align-self: flex-start;
+    padding: 10px 20px;
+    background-color: #646cff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.add-btn:hover {
+    background-color: #535bf2;
+}
+
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.todo-content {
+  flex: 1;
+  text-align: left;
+  cursor: pointer;
+}
+
+.todo-item.completed .todo-content {
+    opacity: 0.6;
+}
+.todo-item.completed .todo-title {
+  text-decoration: line-through;
   color: #888;
 }
+
+.todo-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.todo-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.todo-importance {
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.todo-description {
+    margin: 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.delete-btn {
+  background-color: transparent;
+  color: #ff4444;
+  border: 1px solid #ff4444;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 15px;
+  transition: all 0.2s;
+}
+
+.delete-btn:hover {
+  background-color: #ff4444;
+  color: white;
+}
+
+
